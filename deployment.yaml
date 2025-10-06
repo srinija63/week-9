@@ -1,23 +1,43 @@
-apiVersion:  apps/v1
-kind:  Deployment
+# apiVersion:  apps/v1
+# kind:  Deployment
+# metadata:
+#   name: kubedemoapp-deployment
+# spec:
+#   replicas: 4
+#   selector: 
+#     matchLabels:
+#       app:  kubedemoapp
+#   templates:
+#     metadata:
+#       labels:
+#         app:  kubedemoapp
+#     spec:
+#       containers:
+#         - name: kubedemoapp
+#           image:  saradasrinija/sample:kubeimage1
+#           ports:
+
+#             - containerPort:  5000
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: kubedemoapp-deployment
 spec:
   replicas: 4
-  selector: 
+  selector:
     matchLabels:
-      app:  kubedemoapp
-  templates:
+      app: kubedemoapp
+  template:
     metadata:
       labels:
-        app:  kubedemoapp
+        app: kubedemoapp
     spec:
       containers:
         - name: kubedemoapp
-          image:  saradasrinija/sample:kubeimage1
+          image: saradasrinija/sample:kubeimage1
           ports:
+            - containerPort: 5000
 
-            - containerPort:  5000
 
 
 
