@@ -15,5 +15,6 @@ spec:
           image:  saradasrinija/sample:kubeimage1
           ports:
 
-            - conatinerPort:  5000
+            - containerPort:  5000
+
 
