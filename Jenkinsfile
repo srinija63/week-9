@@ -2,13 +2,7 @@ pipeline{
     agent any
         stages
     
-{
-    stage('Checkout Code') {
-    steps {
-        git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/user/repo.git'
-    }
-}
-
+{ 
     stage('Build Docker Image'){
         steps{
             echo "Build Docker Image"
@@ -37,6 +31,7 @@ pipeline{
 }
 
 }
+
 
 
 
